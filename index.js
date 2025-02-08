@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import axios from 'axios';
 import dotenv from 'dotenv';
-import { Sequelize } from 'sequelize';
+//import { Sequelize } from 'sequelize';
 import pkg from "pg";
 
 
@@ -15,26 +15,26 @@ const app = express();
 app.set('view engine', 'ejs');
 const port = process.env.PORT || 5000;
 
-const sequelize = new Sequelize(process.env.DB_URL, {
-  dialect: "postgres",
-  protocol: "postgres",
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
-  logging: false,
+// const sequelize = new Sequelize(process.env.DB_URL, {
+//   dialect: "postgres",
+//   protocol: "postgres",
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false,
+//     },
+//   },
+//   logging: false,
  
-});
+// });
 
-sequelize.sync()
-.then( () => {
-  console.log("Database connected")
-})
-.catch((err) => {
-console.log(err) 
-});
+// sequelize.sync()
+// .then( () => {
+//   console.log("Database connected")
+// })
+// .catch((err) => {
+// console.log(err) 
+// });
 
 const db = new Pool({
   connectionString: process.env.DB_URL,
