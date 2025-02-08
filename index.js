@@ -55,7 +55,7 @@ const normalizeString = (str) => {
 const fetchBook = async (searchQuery) => {
   const bookRecords = [];
   const query = `${searchQuery}`;
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=AIzaSyBjgoIIarTmDpWJcvsEpGNz5Zs5mLFxNKo`;
+  const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
 
   try {
     const response = await axios.get(url);
@@ -128,7 +128,7 @@ app.get("/search", async (req, res) => {
 // Function to generate book cover
 const fetchCoverUrl = async (title, author) => {
   const query = `${title} ${author}`;
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=AIzaSyBjgoIIarTmDpWJcvsEpGNz5Zs5mLFxNKo`;
+  const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${process.env.GOOGLE_BOOKS_API_KEY}`;
 
   try {
     const response = await axios.get(url);
@@ -312,5 +312,4 @@ app.listen(port, () => {
 
 
 
-//API
-//API KEy: AIzaSyBjgoIIarTmDpWJcvsEpGNz5Zs5mLFxNKo
+
