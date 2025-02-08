@@ -1,0 +1,15 @@
+//INSERT INTO books_read (title, author, cover_url, read_date) VALUES
+// ('Pride and Prejudice', 'Jane Austen', 'https://example.com/cover5.jpg', '2023-05-12'),
+// ('The Catcher in the Rye', 'J.D. Salinger', 'https://example.com/cover6.jpg', '2023-06-18'),
+// ('Brave New World', 'Aldous Huxley', 'https://example.com/cover7.jpg', '2023-07-22'),
+// ('The Hobbit', 'J.R.R. Tolkien', 'https://example.com/cover8.jpg', '2023-08-30'),
+// ('Fahrenheit 451', 'Ray Bradbury', 'https://example.com/cover9.jpg', '2023-09-15'),
+// ('The Alchemist', 'Paulo Coelho', 'https://example.com/cover10.jpg', '2023-10-05');
+
+//INSERT INTO reviews (books_id, review, rating) VALUES
+// (5, 'A timeless romance that explores the complexities of love.', 5),
+// (6, 'A profound exploration of teenage angst and alienation.', 4),
+// (7, 'A thought-provoking look at a future society.', 5),
+// (8, 'An enchanting journey through Middle-earth.', 5),
+// (9, 'A powerful commentary on censorship and freedom.', 4),
+// (10, 'An inspiring tale about following your dreams.', 5);

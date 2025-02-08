@@ -1,0 +1,62 @@
+<%- include("partials/header.ejs") %>
+
+<div class="head">
+  <h1>Give Ratings and View Your Favorite Books</h1><br>
+  <p>- Hey, My name is  Suryatapa Bhattacharya and I built this site as part<br>
+    of my portfolio. I hope you like it!
+  </p>
+</div>
+
+<section class="about" id="about">
+  <div class="content">
+    <div class="title">
+      <span>About this page</span>
+    </div>
+    <div class="about-details">
+      <div class="left">
+        <img decoding="async" src="images/6940546.jpg" alt="Stack Of Books">
+      </div>
+      <div class="right">
+        <div class="topic">Reading Book is one of my Passion</div>
+          <p>- This page is a collection of Books that you want to read and give some ratings and 
+            reviews. You can edit the books and also view the books as per your desire. 
+            You can see which books you like to read and there is a little bit of summary of each of the books. 
+            Ever forget about the books you read? Well fear no longer as BookNotes allows you to easily track and save all the
+            wonderful books you have read, using the power of NodeJS, 
+            Express, Axios, and PostgreSQL!<br><br>Add a new book to your catalog 
+            by simply searching for it and filling in the prompted information. Happy reading!. 
+            Feel free to explore and learn exciting books 😃!
+          </p>
+          <div class="button">
+            <a href="/view">
+              <button>See more</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Favourite Books -->
+<div class="books">
+  <h2 class="fav-title">Some of my Favourite Books</h2>
+  <ul class="content">
+    <% bookData.forEach((book) => { %>
+      <li>
+        <h1 class="title"><%= book.title %></h1>
+        <h2 class="author">Author: <%= book.author %></h2>
+        <img src="<%= book.cover_url %>" alt="<%= book.title %> cover">
+        <p class="read-date">Read on: <%= book.read_date %></p>
+      </li>
+    <% }); %> 
+  </ul>
+</div>
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
