@@ -306,6 +306,8 @@ app.post('/delete', async (req, res) => {
   }
 });
 
+
+//Listen to the port
 app.listen(port, () => {
     console.log(`Server running on port http://localhost:${port}`);
 });
